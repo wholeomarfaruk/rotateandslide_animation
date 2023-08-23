@@ -1,0 +1,86 @@
+/* top-container rotation effect section */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container{
+  display: flex;
+  background-color: purple;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.text_area, .img_rotation{
+  width: 50%;
+  color: #fff;
+}
+.inner_area {
+  width: 75%;
+  margin: 150px 10px 0px 74px;
+}
+.headline{
+  font-size: 2.6em;
+}
+
+/* btn sliding part  */
+.tiral-btn{
+  margin-top: 20px;
+  
+  
+}
+.tiral-btn > a{
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 10px;
+  background-color: #0FB5C4;
+  border-radius: 10px;
+
+  
+}
+
+.fa-arrow-right{
+  margin: 0 5px;
+}
+.tiral-btn, .headline{
+    animation: btn_slide 5s;
+}
+@keyframes btn_slide{
+  20%, 100% {
+    
+    transform: translatex(0);
+  }
+  0% {
+    transform: translatex(-300px);
+    opacity: 0;
+  }
+  10% {
+    
+    opacity: 1;
+  }
+}
+
+/* img rotation part */
+.rotation {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 80px auto;
+  height: 330px;
+  width: 330px;
+  background-image: url(vector.png);
+  background-size: cover;
+  /* border-radius: 50%; */
+  /* box-shadow: -20px -20px 50px 2px #000 inset; */
+  animation: rotate 30s linear alternate infinite;
+}
+/* @keyframes spin {
+  100%{background-position: 100%;}
+} */
+@keyframes rotate{
+  from{ transform: rotate(-360deg); }
+  to{ transform: rotate(360deg); }
+}
